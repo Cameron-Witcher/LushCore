@@ -164,7 +164,9 @@ public class CoreUtils {
 	}
 
 	public static void updateCommunityChests() {
+		log("Updating chests...");
 		for (Entry<Block, Hologram> e : chests.entrySet()) {
+			log("Checking if key is a chest.");
 			if (e.getKey() instanceof Chest) {
 				log("updating....");
 				e.getValue().clearLines();
