@@ -39,7 +39,7 @@ public class CoreUtils {
 				if (CoreUtils.decryptLocation(s).getBlock().getType().equals(Material.CHEST)) {
 					log("Adding a chest at " + s);
 					chests.put(CoreUtils.decryptLocation(s).getBlock(),
-							HologramsAPI.createHologram(plugin, CoreUtils.decryptLocation(s).clone().add(0, 2, 0)));
+							HologramsAPI.createHologram(plugin, CoreUtils.decryptLocation(s).clone().add(0.5, 2, 0.5)));
 				}
 			}
 		} catch (Exception ex) {
@@ -147,7 +147,7 @@ public class CoreUtils {
 		plugin.getConfig().set("CommunityChests", locs);
 		plugin.saveConfig();
 		if (!chests.containsKey(block))
-			chests.put(block, HologramsAPI.createHologram(plugin, block.getLocation().clone().add(0, 2, 0)));
+			chests.put(block, HologramsAPI.createHologram(plugin, block.getLocation().clone().add(0.5, 2, 0.5)));
 	}
 
 	public static void removeCommunityChest(Block block) {
