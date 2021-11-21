@@ -170,7 +170,7 @@ public class CoreUtils {
 			if (e.getKey().getState() instanceof Chest) {
 				log("updating....");
 				e.getValue().clearLines();
-				for (ItemStack i : ((Chest) e.getKey()).getInventory().getContents()) {
+				for (ItemStack i : ((Chest) e.getKey().getState()).getInventory().getContents()) {
 					if (i == null || i.getType().equals(Material.AIR))
 						continue;
 					e.getValue().appendTextLine("&6" + i.getType() + (i.getAmount() == 1 ? "" : "&7x" + i.getAmount()));
