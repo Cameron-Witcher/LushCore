@@ -174,7 +174,7 @@ public class CoreUtils {
 					if (i == null || i.getType().equals(Material.AIR))
 						continue;
 					e.getValue().appendTextLine("&6" + i.getType() + (i.getAmount() == 1 ? "" : "&7x" + i.getAmount()));
-					e.getValue().getLocation().add(0, 0.2, 0);
+					e.getValue().teleport(e.getValue().getLocation().add(0, 0.2, 0));
 				}
 			}
 		}
