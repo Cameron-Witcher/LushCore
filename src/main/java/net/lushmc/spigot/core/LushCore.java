@@ -3,6 +3,7 @@ package net.lushmc.spigot.core;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import net.lushmc.spigot.core.commands.AdminCommands;
+import net.lushmc.spigot.core.listeners.PlayerListener;
 import net.lushmc.spigot.core.utils.CoreUtils;
 import net.md_5.bungee.api.ChatColor;
 
@@ -12,6 +13,8 @@ public class LushCore extends JavaPlugin {
 		CoreUtils.init(this);
 
 		new AdminCommands(this, "lushcore", "communitychest");
+		
+		new PlayerListener(this);
 
 		CoreUtils.log(ChatColor.GREEN + "LushCore has been enabled.");
 	}

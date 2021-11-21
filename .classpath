@@ -8,5 +8,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/home/Minecraft/Dependencies/spigot-1.17.jar"/>
+	<classpathentry kind="lib" path="C:/home/Minecraft/Dependencies/HolographicDisplays.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
