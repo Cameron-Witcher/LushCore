@@ -1,0 +1,21 @@
+name: LushCore
+author: QuickScythe
+version: ALPHA
+description: Core funcationality for LushMC brought to you by the creator of MysticCloud.net
+api-version: 1.16
+api: Spigot
+main: net.lushmc.spigot.core.LushCore
+softdepend:
+- Vault
+- PlaceholderAPI
+commands:
+   communitychest:
+      usage: /communitychest
+      aliases:
+      - cc
+      - comc
+   lushcore:
+      usage: /lushcore
+      aliases:
+      - lush
+      - core
