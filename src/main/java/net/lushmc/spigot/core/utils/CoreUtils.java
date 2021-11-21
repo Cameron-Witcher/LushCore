@@ -169,6 +169,7 @@ public class CoreUtils {
 			log("Checking if key is a chest.");
 			if (e.getKey().getState() instanceof Chest) {
 				log("updating....");
+				e.getValue().teleport(e.getKey().getLocation().add(0.5, 2, 0.5));
 				e.getValue().clearLines();
 				for (ItemStack i : ((Chest) e.getKey().getState()).getInventory().getContents()) {
 					if (i == null || i.getType().equals(Material.AIR))
