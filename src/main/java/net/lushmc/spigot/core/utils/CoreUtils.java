@@ -167,7 +167,7 @@ public class CoreUtils {
 		log("Updating chests...");
 		for (Entry<Block, Hologram> e : chests.entrySet()) {
 			log("Checking if key is a chest.");
-			if (e.getKey() instanceof Chest) {
+			if (e.getKey().getState() instanceof Chest) {
 				log("updating....");
 				e.getValue().clearLines();
 				for (ItemStack i : ((Chest) e.getKey()).getInventory().getContents()) {
