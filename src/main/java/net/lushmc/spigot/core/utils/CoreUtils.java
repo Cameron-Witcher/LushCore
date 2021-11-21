@@ -35,7 +35,9 @@ public class CoreUtils {
 
 		try {
 			for (String s : plugin.getConfig().getStringList("CommunityChests")) {
+				log("Looking for chest at " + s);
 				if (CoreUtils.decryptLocation(s).getBlock().getType().equals(Material.CHEST)) {
+					log("Adding a chest at " + s);
 					chests.put(CoreUtils.decryptLocation(s).getBlock(),
 							HologramsAPI.createHologram(plugin, CoreUtils.decryptLocation(s).clone().add(0, 2, 0)));
 				}
